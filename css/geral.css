@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;0,800;1,200&display=swap");
-body,
-ul,
-li,
-a,
-p,
-h1,
-h2 {
+* {
   margin: 0px;
   padding: 0px;
   font-family: "Poppins", sans-serif;
@@ -25,19 +19,30 @@ li {
   list-style: none;
 }
 
-.header {
-  display: flex;
+body {
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+}
+
+.header-pai {
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
   background: #290742;
-  justify-content: space-around;
+}
+
+.header {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: space-between;
   align-items: flex-end;
   height: 100px;
 }
 .nav {
   display: flex;
+  gap: 80px;
 }
-.nav a {
-  padding: 0px 30px;
-}
+
 .nav a:hover {
   font-weight: 700;
 }
@@ -50,7 +55,17 @@ li {
   position: absolute;
   background: #4fff4b;
 }
+.logo2 {
+  display: none;
+}
 .buscar {
+  display: none;
+}
+.btn-mobile {
+  display: none;
+}
+
+#desktop-buscar {
   display: flex;
 }
 .buscar input {
@@ -78,27 +93,25 @@ li {
 .buscar div img {
   width: 25px;
 }
-.flex1 {
+.home {
+  grid-column: 2/3;
   display: flex;
-  justify-content: space-around;
-  background: #290742;
+  justify-content: space-between;
 }
-.flex1 .textFlex1 h1 {
+.home .home-text h1 {
   display: block;
   font-size: 2.4rem;
   font-weight: 700;
   color: #9e6dc2;
-  margin-left: 10px;
+
   margin-top: 50px;
 }
-.textFlex1 p {
+.home-text p {
   color: #fff;
-  margin-left: 10px;
+
   margin-top: 10px;
 }
-.textFlex1 a {
-  margin-left: 10px;
-}
+
 .vejaMais {
   display: block;
   margin-top: 15px;
@@ -106,12 +119,11 @@ li {
   font-weight: 700;
 }
 .vejaMais::after {
-  content: url(../assets/img/arrow-right.svg);
+  content: url(/assets/img/arrow-right.svg);
   position: absolute;
   margin-left: 5px;
 }
-.imgFlex1 {
-  margin-right: 10px;
+.home-img {
   margin-top: 50px;
   margin-bottom: 50px;
 }

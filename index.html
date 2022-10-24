@@ -6,37 +6,47 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RocketBlog</title>
-  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <section class="header-pai">
+    <header class="header">
+      <div class="logo"><img src="./assets/img/logo.svg" alt=""></div>
+      <button class="btn-mobile">Menu <span></span></button>
+      <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="">Sobre</a></li>
+        <li><a href="">Categoria</a></li>
+        <li><a href="">Contato</a></li>
+        <li>
+          <div class="buscar">
+            <input type="search" name="" id="" placeholder="        Buscar">
+            <div><img src="./assets/img/search.svg" alt=""></div>
+          </div>
+        </li>
+      </ul>
+      <div class="logo2"><img src="./assets/img/logo.svg" alt=""></div>
+      <div id="desktop-buscar" class="buscar">
+        <input type="search" name="" id="" placeholder="        Buscar">
+        <div><img src="./assets/img/search.svg" alt=""></div>
+      </div>
 
-  <header class="header">
-    <div><img src="assets/img/logo.svg" alt=""></div>
-    <ul class="nav">
-      <li><a href="">Home</a></li>
-      <li><a href="">Sobre</a></li>
-      <li><a href="">Categoria</a></li>
-      <li><a href="">Contato</a></li>
-    </ul>
-    <div class="buscar">
-      <input type="search" name="" id="" placeholder="        Buscar">
-      <div><img src="assets/img/search.svg" alt=""></div>
-    </div>
-  </header>
-  <section class="flex1">
-    <div class="textFlex1">
-      <h1>Veja o guia definitivo para <br> conquistar seus objetivos <br> como DEV em 2022</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> Sequi, reprehenderit eligendi maxime quidem amet, <br> provident consectetur iusto adipisci aliquid, esse blanditiis minima. <br> In, explicabo dolore minus libero quis assumenda odio!</p>
-      <a href="" class="vejaMais">Veja mais</a>
-    </div>
-    <div class="imgFlex1">
-      <img src="assets/img/featured-image.png" alt="">
-    </div>
+    </header>
+    <section id="home" class="home">
+      <div class="home-text">
+        <h1>Veja o guia definitivo para <br> conquistar seus objetivos <br> como DEV em 2022</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> Sequi, reprehenderit eligendi maxime quidem amet, <br> provident consectetur iusto adipisci aliquid, esse blanditiis minima. <br> In, explicabo dolore minus libero quis assumenda odio!</p>
+        <a href="" class="vejaMais">Veja mais</a>
+      </div>
+      <div class="home-img">
+        <img src="./assets/img/featured-image.png" alt="">
+      </div>
+    </section>
   </section>
   <section class="flex2">
     <div class="imgFlex2">
-      <img src="assets/img/post-1.png" alt="">
+      <img src="./assets/img/post-1.png" alt="">
       <p class="janeiro">Janeiro 04, 2022</p>
       <h1>Começando no ReactJS em 2022</h1>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> Sequi, reprehenderit eligendi maxime quidem amet, <br> provident consectetur iusto adipisci aliquid, esse blanditiis minima. <br> In, explicabo dolore minus libero quis assumenda odio!</p>
@@ -95,7 +105,7 @@
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing <br> elit. Sequi, reprehenderit</p>
     </div>
   </section>
-  <script src="script.js"></script>
+  <script type="module" src="js/script.js"></script>
 </body>
 
 </html>
