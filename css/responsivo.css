@@ -38,7 +38,6 @@
   .nav {
     display: none;
     position: absolute;
-    top: 110px;
     background: #290742;
     width: 300px;
     border-radius: 5px;
@@ -54,7 +53,7 @@
       top: 50px;
     }
     to {
-      top: 110px;
+      top: 120px;
     }
   }
   .btn-mobile {
