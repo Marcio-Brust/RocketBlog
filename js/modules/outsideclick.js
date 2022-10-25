@@ -1,5 +1,5 @@
 export default function outsideClick(element, events, callback) {
-  /*   const html = document.documentElement;
+  const html = document.documentElement;
   const outside = "data-outside";
 
   if (!element.hasAttribute(outside)) {
@@ -19,5 +19,5 @@ export default function outsideClick(element, events, callback) {
       });
       callback();
     }
-  } */
+  }
 }

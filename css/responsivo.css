@@ -1,10 +1,10 @@
 @media (max-width: 1300px) {
-  .home .home-text h1 {
+  /*   .home .home-text h1 {
     font-size: 1.5rem;
   }
   .home .home-text p {
     font-size: 0.85rem;
-  }
+  } */
 }
 @media (max-width: 1250px) {
   .nav {
@@ -13,8 +13,18 @@
   }
 }
 @media (max-width: 1190px) {
+  .buscar {
+    width: 200px;
+    display: flex;
+  }
   .nav {
     gap: 50px;
+  }
+  .nav li:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
   }
   .header-pai {
     grid-template-columns: 20px 1fr 20px;
@@ -26,14 +36,26 @@
     display: block;
   }
   .nav {
-    display: block;
+    display: none;
     position: absolute;
     top: 110px;
     background: #290742;
-    width: 200px;
+    width: 300px;
     border-radius: 5px;
     z-index: 200;
-    height: 250px;
+    height: 300px;
+    animation: show-nav 0.5s forwards;
+  }
+  .nav.active {
+    display: block;
+  }
+  @keyframes show-nav {
+    from {
+      top: 50px;
+    }
+    to {
+      top: 110px;
+    }
   }
   .btn-mobile {
     display: block;
@@ -58,14 +80,24 @@
     height: 2px;
     background: #4fff4b;
     margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  .btn-mobile.active span {
+    border-color: transparent;
+  }
+  .btn-mobile.active span::before {
+    transform: rotate(135deg);
+  }
+  .btn-mobile.active span::after {
+    transform: rotate(-135deg);
+    top: -7px;
   }
   .nav a {
     display: block;
     padding: 20px 0px;
   }
-  .buscar {
-    display: flex;
-  }
+
   #desktop-buscar {
     display: none;
   }
@@ -82,19 +114,46 @@
     grid-row: 2;
     margin-bottom: 30px;
   }
+  .meio {
+    grid-template-columns: 20px 1fr 1fr 20px;
+  }
+  .meio-img {
+    grid-column: 2/4;
+    margin: 0 auto;
+    margin-top: 50px;
+    grid-template-columns: 1fr;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 20px 1fr 1fr 20px;
+  }
+  .footer div {
+    grid-column: 2/4;
+    margin: 0 auto;
+  }
 }
 @media (max-width: 650px) {
   body {
     grid-template-columns: 0 1fr 0;
   }
+
+  .header-pai {
+    grid-template-columns: 5px 1fr 5px;
+  }
+  .meio {
+    grid-template-columns: 5px 1fr 1fr 5px;
+  }
+
+  .footer {
+    grid-template-columns: 5px 1fr 1fr 5px;
+  }
+
   .btn-mobile {
     font-size: 1rem;
   }
-  .home img {
-    width: 300px;
-  }
+
   .home .home-text h1 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .home .home-text p {
     font-size: 0.7rem;
@@ -105,5 +164,20 @@
   .logo2 {
     display: block;
     width: 100px;
+  }
+  .meio-img h1 {
+    font-size: 1.2rem;
+  }
+  .meio-text h1 {
+    font-size: 1.2rem;
+  }
+  .meio-paragrafo {
+    font-size: 0.7rem;
+  }
+  .footer div h1 {
+    font-size: 1.2rem;
+  }
+  .footer div p {
+    font-size: 0.7rem;
   }
 }
