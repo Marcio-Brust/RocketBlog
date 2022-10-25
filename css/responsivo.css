@@ -9,6 +9,9 @@
     width: 200px;
     display: flex;
   }
+  .buscar input {
+    width: 150px;
+  }
   .nav {
     gap: 50px;
   }
