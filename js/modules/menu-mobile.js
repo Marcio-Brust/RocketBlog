@@ -12,7 +12,7 @@ export default function initiBtnMobile() {
     nav.classList.remove("active");
     btnMobile.classList.remove("active");
 
-    outsideClick(btnMobile, ["click", "touchstart"], () => {
+    outsideClick(nav, ["click", "touchstart"], () => {
       nav.classList.remove("active");
       btnMobile.classList.remove("active");
     });
