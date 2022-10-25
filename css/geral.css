@@ -120,7 +120,7 @@ body {
   font-weight: 700;
 }
 .vejaMais::after {
-  content: url(/assets/img/arrow-right.svg);
+  content: url(/./assets/img/arrow-right.svg);
   position: absolute;
   margin-left: 5px;
 }
